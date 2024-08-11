@@ -4,6 +4,7 @@ const path = require("path");
 const axios = require("axios");
 const colors = require("colors");
 const readline = require("readline");
+const port = process.env.PORT || 8080;
 
 const WAITTIME = 1300; // Thời gian chờ giữa các lần chạy (giây)
 
