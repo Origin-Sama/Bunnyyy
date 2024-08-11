@@ -1,20 +1,22 @@
+const http = require('http');
 const { HttpsProxyAgent } = require("https-proxy-agent");
 const fs = require("fs");
 const path = require("path");
 const axios = require("axios");
 const colors = require("colors");
 const readline = require("readline");
-const http = require('http');
 
-const hostname = '127.0.0.1';
-const port = 8080;
+const hostname = '45.127.248.127';
+const port = 5128;
 
 const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  });
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Hello, World!\n');
+});
 
 server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+    console.log(`Server running at http://${hostname}:${port}/`);
 });
 
 const WAITTIME = 1300; // Thời gian chờ giữa các lần chạy (giây)
