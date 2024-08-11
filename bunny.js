@@ -4,6 +4,13 @@ const path = require("path");
 const axios = require("axios");
 const colors = require("colors");
 const readline = require("readline");
+const http = require('http');
+
+const hostname = '127.0.0.1';
+const port = 8080;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
 
 const WAITTIME = 1300; // Thời gian chờ giữa các lần chạy (giây)
 
